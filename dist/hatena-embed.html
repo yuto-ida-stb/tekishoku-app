@@ -1,0 +1,54 @@
+<!-- はてなブログ HTML編集用 -->
+<!-- 適職診断アプリ -->
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        orange: {
+          50: '#fff7ed', 100: '#ffedd5', 200: '#fed7aa', 300: '#fdba74',
+          400: '#fb923c', 500: '#EF671F', 600: '#d55616', 700: '#c2410c',
+          800: '#9a3412', 900: '#7c2d12', 950: '#431407',
+        }
+      }
+    }
+  }
+}
+</script>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+#root, #root * { font-family: 'Noto Sans JP', sans-serif; box-sizing: border-box; }
+@keyframes bounce { 0%,20%,50%,80%,100%{transform:translateY(0)}40%{transform:translateY(-15px)}60%{transform:translateY(-7px)} }
+@keyframes fade-in { from{opacity:0}to{opacity:1} }
+.animate-bounce { animation: bounce 2s infinite; }
+.animate-fade-in { animation: fade-in 0.5s ease-out; }
+</style>
+
+<!-- React App Container -->
+<div id="root"></div>
+
+<!-- Import Map -->
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.3.1",
+    "react/jsx-runtime": "https://esm.sh/react@18.3.1/jsx-runtime",
+    "react-dom": "https://esm.sh/react-dom@18.3.1",
+    "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
+    "react-router-dom": "https://esm.sh/react-router-dom@6.22.3?deps=react@18.3.1,react-dom@18.3.1",
+    "lucide-react": "https://esm.sh/lucide-react@0.344.0?deps=react@18.3.1,react-dom@18.3.1",
+    "react-icons/fi": "https://esm.sh/react-icons@5.0.1/fi?deps=react@18.3.1"
+  }
+}
+</script>
+
+<!-- App JS from GitHub Pages (with cache busting) -->
+<script type="module" src="https://yuto-ida-stb.github.io/tekishoku-app/dist/assets/app.js?v=20260107-3"></script>
