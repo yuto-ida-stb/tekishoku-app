@@ -1,0 +1,129 @@
+<!-- はてなブログ HTML編集用 -->
+<!-- 適職診断アプリ -->
+
+<!-- はてなCMSスタイルのリセット・全画面化 -->
+<style>
+/* はてなのヘッダー・ナビ・フッターを非表示 */
+#globalheader-container,
+#blog-title,
+#top-editarea,
+.header-image-wrapper,
+header.entry-header,
+.entry-header,
+.entry-title,
+.entry-categories,
+.entry-date,
+.entry-footer,
+.hatena-module,
+.sidebar,
+#box2,
+#footer,
+footer,
+.breadcrumb,
+.pager,
+.comment-box,
+.social-buttons,
+.hatena-star-comment-container,
+.entry-content > p:empty,
+nav[role="navigation"],
+.globalheader-off #container,
+#top-box,
+.page-header,
+.entry-categories-inner {
+  display: none !important;
+}
+
+/* 記事コンテナを全画面に */
+#content-inner,
+#wrapper,
+#content,
+#main,
+#main-inner,
+.entry,
+.entry-inner,
+.entry-content,
+article,
+#container,
+.container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+  background: transparent !important;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #f5f5f5 !important;
+}
+
+/* #root を全画面に */
+#root {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 9999 !important;
+  background: #f5f5f5 !important;
+  overflow-y: auto !important;
+}
+
+#root, #root * {
+  font-family: 'Noto Sans JP', sans-serif !important;
+  box-sizing: border-box !important;
+}
+
+@keyframes bounce { 0%,20%,50%,80%,100%{transform:translateY(0)}40%{transform:translateY(-15px)}60%{transform:translateY(-7px)} }
+@keyframes fade-in { from{opacity:0}to{opacity:1} }
+.animate-bounce { animation: bounce 2s infinite; }
+.animate-fade-in { animation: fade-in 0.5s ease-out; }
+</style>
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        orange: {
+          50: '#fff7ed', 100: '#ffedd5', 200: '#fed7aa', 300: '#fdba74',
+          400: '#fb923c', 500: '#EF671F', 600: '#d55616', 700: '#c2410c',
+          800: '#9a3412', 900: '#7c2d12', 950: '#431407',
+        }
+      }
+    }
+  }
+}
+</script>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<!-- React App Container -->
+<div id="root"></div>
+
+<!-- Import Map -->
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.3.1",
+    "react/jsx-runtime": "https://esm.sh/react@18.3.1/jsx-runtime",
+    "react-dom": "https://esm.sh/react-dom@18.3.1",
+    "react-dom/client": "https://esm.sh/react-dom@18.3.1/client",
+    "react-router-dom": "https://esm.sh/react-router-dom@6.22.3?deps=react@18.3.1,react-dom@18.3.1",
+    "lucide-react": "https://esm.sh/lucide-react@0.344.0?deps=react@18.3.1,react-dom@18.3.1",
+    "react-icons/fi": "https://esm.sh/react-icons@5.0.1/fi?deps=react@18.3.1"
+  }
+}
+</script>
+
+<!-- App JS from GitHub Pages (with cache busting) -->
+<script type="module" src="https://yuto-ida-stb.github.io/tekishoku-app/dist/assets/app.js?v=20260107-5"></script>
